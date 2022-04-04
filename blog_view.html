@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta property="og:url" content="">
+        <meta property="og:title" content="Salman">
+        <meta property="og:type" content="website">
+        <meta property="og:image" content="img/logo_favicon.ico">
+        <meta property="og:description" content="Salman">
+		<title>Salman</title>
+		<meta name="description" content="Salman">
+		<meta name="author" content="minks">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<link rel="shortcut icon" href="img/logo_favicon.ico">
+		<link rel="apple-touch-icon" href="img/logo_favicon.ico">
+		
+		<link href="css/reset.css" type="text/css" rel="stylesheet">
+		<link href="css/font.css" type="text/css" rel="stylesheet">
+		<link href="css/common.css" type="text/css" rel="stylesheet">
+		<link href="css/main.css" type="text/css" rel="stylesheet">
+		<link href="css/swiper.min.css" type="text/css" rel="stylesheet">
+		
+		<!--[if lt IE 9]>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+		
+		<!--[if gte IE 9]>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<![endif]-->
+		
+		<!--[if !IE]>--> 
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<!--<![endif]-->
+		
+		<script src="js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="js/swiper.min.js"></script>
+		<script src="js/function.js"></script>
+	</head>
+
+	<body>
+		<div id="wrap">
+            <!-- header -->
+		    <header class="header">
+                <h1 class="not_view">header</h1>
+                
+                <div class="header_main cf">
+                	<div class="header_logo">
+						<a href="index.html"><img src="img/top_logo.png"></a>
+					</div>
+                	
+                	<!--<div class="header_search_area">
+                		<div class="header_search">
+							<form name="" method="" action="" class="cf">
+								<input type="text" name="" class="header_search_text" placeholder="찾고 싶은 정보를 입력하세요">
+								<input type="submit" class="header_search_btn">
+							</form>
+						</div>
+						<div class="header_search_footer">검색</div>
+					</div>-->
+                	
+					<!-- nav -->
+					<nav class="nav">
+						<h2 class="not_view">nav</h2>
+
+						<ul class="nav_menu cf">
+							<li><a href="index.html">HOME</a></li>
+							<li><a href="blog_list.html">BLOG</a></li>
+							<li><a href="recruit.html">RECRUIT</a></li>
+							<li><a href="contact.html">CONTACT</a></li>
+						</ul>
+					</nav>
+				</div>
+            </header>
+			
+			<div class="fk_header"></div>
+			
+			<!-- content -->
+            <div class="content_area">
+                <section class="board_section">
+					<article class="board_top_banner"></article>
+					
+					<article class="board_view">
+						<div class="board_view_top">
+							<p class="board_view_tit"><a href="blog_view.html"><span itemprop="name">아이패드로 코딩하기</span></a></p>
+							<p class="board_view_date"><time datetime="2020-01-11TJan:00:1578700800Z" itemprop="datePublished">Jan 11, 2020</time></p>
+							<div class="board_view_profile" itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+								<div class="board_view_profile_img" style="background-image: url('img/Gildong.png');" itemprop="image"></div>
+								<div class="board_view_profile_text">
+									<span itemprop="jobTitle">데이터분석가</span><br>
+									<span itemprop="author">박장시</span>
+								</div>
+							</div>
+						</div>
+						
+						<div class="board_view_main">
+							<div class="board_view_con" itemprop="articleBody">
+								<p>개발 서버를 따로 만들면, 어떤 기기에서든 연결하여 코딩이 가능하다. 서버를 세팅하고 아이패드를 연결해 개발한 경험을 공유한다.</p>
+								<p class="center"><img src="img/ipad.jpg" alt="ipad.jpg"></p>
+								<h1 id="발단">발단</h1>
+								<p>코딩용으로 사용하던 맥북이 갑자기 고장났다. 2주간 작업 도구가 필요하던 차에 아이패드로 코딩할 수 있지 않을까 생각이 들어 검색하니, 역시나 아이패드로 코딩하는 사람들이 있다. 꼭 아이패드가 아니어도 상관없다. 터미널을 이용해서 <a href="https://en.wikipedia.org/wiki/Secure_Shell">SSH</a> 연결로 서버에 접속하는 방식이므로 모든 컴퓨터에서 가능하다. 심지어 핸드폰에서도 가능하다.</p>
+								<h2 id="준비물">준비물</h2>
+								<p>크게 5가지가 필요하다.</p>
+								<h3 id="아이패드">아이패드</h3>
+								<h3 id="터미널-앱">터미널 앱</h3>
+								<h3 id="개발-서버">개발 서버</h3>
+								<h3 id="인터넷">인터넷</h3>
+								<h3 id="외장-키보드와-텍스트-기반-에디터에-익숙한-손가락">외장 키보드와 텍스트 기반 에디터에 익숙한 손가락</h3>
+								<h1 id="환경-설정">환경 설정</h1>
+								<p>개발 서버를 세팅하고 아이패드와 연결하는 과정을 설명한다. 크게 어려운 부분은 없으나, 처음에 직접 겪었던 시행착오 위주로 소개한다.</p>
+								<h2 id="새-유저로-접속하기">새 유저로 접속하기</h2>
+								<p><a href="https://www.blink.sh">Blink Shell</a>에서 <code class="language-plaintext highlighter-rouge">root</code> 유저가 아니라 새로 만든 일반 유저 <code class="language-plaintext highlighter-rouge">tester</code>로 접속하려면 host 설정에서 user를 기존의 <code class="language-plaintext highlighter-rouge">root</code>에서 <code class="language-plaintext highlighter-rouge">tester</code>로 바꿔준다. 다른 설정은 그대로 사용한다.</p>
+								<p>이제 다시 서버에 접속하면 <code class="language-plaintext highlighter-rouge">root</code> 유저가 아니라 <code class="language-plaintext highlighter-rouge">tester</code> 유저로 접속하게 된다.</p>
+								<figure class="highlight">
+									<pre><code class="language-console" data-lang="console"><span class="gp">blink&gt;</span><span class="w"> </span>ssh tester</code></pre>
+								</figure>
+								<p>아무 문제 없이 접속 되었다면 접속 유저를 확인해보자.</p>
+								<figure class="highlight">
+									<pre><code class="language-console" data-lang="console"><span class="gp">&gt;</span><span class="w"> </span><span class="nb">whoami</span><br><span class="go"><br>tester</span></code></pre>
+								</figure>
+								<p>이제부터 개발 서버에 접속할 때는 <code class="language-plaintext highlighter-rouge">tester</code> 유저로 접속한다.</p>
+								<h1 id="개발-환경-설정">개발 환경 설정</h1>
+								<p>이제 터미널과 서버가 생겼으니 이를 통해 직접 개발을 할 차례다. 무엇을 만드느냐에 따라서 환경 설정이 매우 다른데, 개발 환경과 관련해서는 매우 간략하게 소개만 한다. 구체적인 세팅을 모두 소개하면 글이 매우 길어질 것 같은데, 이에 대해서는 추후에 따로 정리하려고 한다. 일단 리눅스 환경에서 터미널로 작업할 때의 환경 설정을 검색하면 당장 참고할 수 있는 자료가 많다. 주제별로 참고한 글의 링크를 아래에 함께 정리한다.</p>
+								<h2 id="vim">Vim</h2>
+								<p><a href="https://www.vim.org">Vim</a>은 사용할 수 있는 애드인이 매우 많다. 사실상 핵심적인 <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a>의 기능은 애드인으로 <a href="https://www.vim.org">Vim</a>에서 사용할 수 있다. 처음에 <a href="https://en.m.wikipedia.org/wiki/Command-line_interface">CLI</a> 환경에서 <a href="https://www.vim.org">Vim</a>으로 개발을 시작하면 그 빈약한 기능 때문에 다시 화려한 <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a>로 돌아가고 싶다. 어떤 애드인으로 무슨 기능을 사용할 수 있는지 몰라서 이런 경우가 생기는데, 자신이 개발하는 언어를 기반으로 검색을 해보면 <a href="https://www.vim.org">Vim</a>에서 쓸 수 있는 다양한 애드인을 찾을 수 있다. 정말 안 되는 게 없다.</p>
+								<ul>
+							    	<li><a href="https://realpython.com/vim-and-python-a-match-made-in-heaven/">VIM and Python – A Match Made in Heaven</a></li>
+							    	<li><a href="https://www.fullstackpython.com/vim.html">Vim</a></li>
+							    	<li><a href="https://spacevim.org/use-vim-as-a-python-ide/">Use Vim as a Python IDE</a></li>
+								</ul>
+								<h1 id="좋은-점">좋은 점</h1>
+								<p>아이패드로 <a href="https://en.m.wikipedia.org/wiki/Command-line_interface">CLI</a> 환경에서 작업을 하면 좋은 점이 무척 많다.</p>
+								<h1 id="결론">결론</h1>
+								<p>처음에는 잠깐만 아이패드를 개발용으로 쓸 생각이었다. 그런데 몇 주 쓰다보니 딱히 불편한 점이 없었고, 사소한 문제들은 항상 해결책이 있었다. 오히려 그런 제약들을 해결하느라 새로운 걸 배우고, 더 효율적으로 작업할 수 있게 되었다. 지금은 자주 고장나던 맥북을 처분하고, 아이패드로만 개발한다. 굳이 잘 쓰고 있는 랩탑을 없애고 태블릿 환경으로 옮길 필요는 없겠지만, 이렇게도 코딩할 수 있다.</p>
+								<h1 id="참고">참고</h1>
+								<p>위의 글은 아래 링크들을 참고하였다.</p>
+								<ul>
+							    	<li><a href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04">Initial Server Setup with Ubuntu 18.04</a></li>
+							    	<li><a href="https://jblevins.org/log/blink-shell">Blink Shell for iOS</a></li>
+							    	<li><a href="https://arslan.io/2019/01/07/using-the-ipad-pro-as-my-development-machine/">Using the iPad Pro as my development machine</a></li>
+								</ul>
+							</div>
+							
+							<div class="board_view_facebook">
+								<div id="fb-root"></div>
+								<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v8.0" nonce="ywKLencU"></script>
+							
+								<div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="true"></div>
+							</div>
+							
+							<div class="board_view_survey">
+								<form name="" method="" action="">
+									<div class="board_view_survey_item">
+										<div class="board_view_survey_q">글의 난이도가 적절하였나요?</div>
+										<div class="board_view_survey_a">
+											<div class="content_radio_area">
+												<input type="radio" id="difficulty1" name="difficulty" value="1">
+												<label for="difficulty1">너무 쉽다</label>
+											</div>
+											<div class="content_radio_area">
+												<input type="radio" id="difficulty2" name="difficulty" value="2">
+												<label for="difficulty2">약간 쉽다</label>
+											</div>
+											<div class="content_radio_area">
+												<input type="radio" id="difficulty3" name="difficulty" value="3">
+												<label for="difficulty3">적절하다</label>
+											</div>
+											<div class="content_radio_area">
+												<input type="radio" id="difficulty4" name="difficulty" value="4">
+												<label for="difficulty4">약간 어렵다</label>
+											</div>
+											<div class="content_radio_area">
+												<input type="radio" id="difficulty5" name="difficulty" value="5">
+												<label for="difficulty5">너무 어렵다</label>
+											</div>
+										</div>
+									</div>
+									<div class="board_view_survey_item">
+										<div class="board_view_survey_q">실무 혹은 학업에 도움이 되었나요?</div>
+										<div class="board_view_survey_a">
+											<div class="content_radio_area">
+												<input type="radio" id="helpful1" name="helpful" value="1">
+												<label for="helpful1">전혀 도움이 안된다</label>
+											</div>
+											<div class="content_radio_area">
+												<input type="radio" id="helpful2" name="helpful" value="2">
+												<label for="helpful2">별로 도움이 안된다</label>
+											</div>
+											<div class="content_radio_area">
+												<input type="radio" id="helpful3" name="helpful" value="3">
+												<label for="helpful3">보통이다</label>
+											</div>
+											<div class="content_radio_area">
+												<input type="radio" id="helpful4" name="helpful" value="4">
+												<label for="helpful4">약간 도움이 된다</label>
+											</div>
+											<div class="content_radio_area">
+												<input type="radio" id="helpful5" name="helpful" value="5">
+												<label for="helpful5">매우 도움이 된다</label>
+											</div>
+										</div>
+									</div>
+									<input type="submit" value="설문참여" class="board_view_survey_btn">
+								</form>
+							</div>
+							
+							<div class="board_view_move">
+								<div class="board_view_move_item">
+									<p class="board_view_move_tit">다음 글</p>
+									<p class="board_view_move_con"><a href="blog_view.html">개발자를 위한 정보 검색 팁</a></p>
+								</div>
+								<div class="board_view_move_item">
+									<p class="board_view_move_tit">이전 글</p>
+									<p class="board_view_move_con"><a href="blog_view.html">박스 플롯에 대하여</a></p>
+								</div>
+							</div>
+						</div>
+					</article>
+				</section>
+            </div>
+            
+            <!-- footer -->
+			<footer class="footer">
+				<h1 class="not_view">footer</h1>
+				
+				<div class="footer_main">
+					<div class="center_ct cf">						
+						<div class="footer_left">
+							<div class="footer_tit">COMPANY</div>
+							<div class="footer_con">
+								COMPANYㅣSALMAN INC.<br>
+								ADDRESSㅣ#307 SINCHON-RO 51-GIL, SEODAEMUN-GU, SEOUL, KOREA<br>
+								REPRESENTATIVEㅣ서병희<br>
+								BUSINESS NUMBERㅣ171-88-01463<br>
+								LICENSEㅣ제2020-서울서대문-0396호 <a href="#" class="link">사업자 정보확인</a><br>
+								PERSONAL INFO MANAGERㅣ권민지<br>
+								E-MAILㅣadmin@salman.kr
+								
+								<ul class="footer_link cf">
+									<li><a href="http://cppa.kr/" target="_blank"><img src="img/link_btn.png" alt="link_btn"></a></li>
+									<li><a href="javascript:void(0);" onclick="alert('준비중입니다.');"><img src="img/link_btn4.png" alt="link_btn4"></a></li>
+									<li><a href="javascript:void(0);" onclick="alert('준비중입니다.');"><img src="img/link_btn4.png" alt="link_btn4"></a></li>
+								</ul>
+							</div>
+						</div>
+						
+						<div class="footer_right">
+							<div class="footer_tit">ABOUT SALMAN</div>
+							<div class="footer_con">
+								<ul class="footer_menu cf">
+									<li><a href="index.html">HOME</a></li>
+									<li><a href="blog_list.html">BLOG</a></li>
+									<li><a href="recruit.html">RECRUIT</a></li>
+									<li><a href="contact.html">CONTACT</a></li>
+								</ul>
+								
+								<div class="footer_copyright">
+									© Copyright ⓒ 2020 All rights reserved by salman Inc.
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			
+			<!--<div class="content_fix_btn_area">
+				<div class="fix_btn">
+					<a href="#"><img src="img/mail_icon.png" alt="mail_icon"></a>
+				</div>
+			</div>-->
+		</div>
+	</body>
+</html>
